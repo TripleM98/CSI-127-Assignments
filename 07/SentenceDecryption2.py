@@ -56,25 +56,16 @@ def decode(s):
     return Location
         
 
-z='what is going on?'
-print(encode_string(z, 1324))
+z='what is going on'
 print(decode(z))
-s= "this is my string"
-print ("original:", s)
-print('encoded: ', encode_string(s, 13))
+print('encoded: ', encode_string(z, 13))
 
 
 f = open('48320-0.txt')
-r = f.read()
-r = r.lower()
-real_stats = build_frequency_vector(r)
+x = f.read()
+x = x.lower()
+real_stats = build_frequency_vector(x)
 f.close()
 
-print('decoder(alice): ',decode(s))
+print('decoded:',decode(z))
 
-f = open('48320-0.txt')
-r = f.read()
-r = r.lower()
-real_stats = build_frequency_vector(r)
-f.close()
-print('decoder (sherlock): ', decode(s))
